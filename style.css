@@ -5,11 +5,11 @@
     --card-horizontal-space:100px;
 
 }
-.body{
+body{
     height: 100vh;
 }
 
-.main{
+main{
     height: 55%;
     display: flex;
     justify-content: center;
