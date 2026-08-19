@@ -59,7 +59,8 @@ function createCard(cardItem){
     //add inner card element as child element to card element
     addChildElement(cardElem, cardInnerElem)
 
-    
+    //add card element as child element to appropriate grid cell
+    addCardToGridCell(cardElem)
 }
 
 function createElement(elemType){
@@ -73,4 +74,25 @@ function addIdToElement(elem, id){
 }
 function addChildElement(parentElem,childElem){
     parentElem.appendChild(childElem)
+}
+function addCardToGridCell(card){
+    const cardPositionClassName = mapCardToGridCell(card)
+
+    const cardPosElem = document.querySelector(cardPositionClassName)
+
+    addChildElement(cardPosElem, card)
+}
+function mapCardToGridCell(){
+    if(card.id == 1){
+        return '.card-pos-a'
+    }
+    else if(card.id == 2){
+        return '.card-pos-b'
+    }
+    else if(card.id == 3){
+        return '.card-pos-c'
+    }
+    else if(card.id = 4){
+        return '.card-pos-d'
+    }
 }
