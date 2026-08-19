@@ -9,6 +9,15 @@ const cardBackImgPath = '/images/card-back-blue.png'
 
 const cardContainerElem = document.querySelector('.card-container')
 
+createCards()
+
+function createCards(){
+    cardOobjectDefinitions.forEach((cardItem)=>{
+        createCard(cardItem)
+    })
+}
+
+
 function createCard(cardItem){
     //create div elements that make up a card
     const cardElem = createElement('div')
@@ -34,15 +43,15 @@ function createCard(cardItem){
     addClassToElement(cardBackElem, 'card-back')
 
     //add src attribute and appropriate value to img element - back of card
-    addSrcToImgElem(cardBackElem, cardBackImgPath)
+    addSrcToImgElem(cardBackImg, cardBackImgPath)
 
-    addSrcToImgElem(cardFrontElem, cardItem.imagePath)
+    addSrcToImgElem(cardFrontImg, cardItem.imagePath)
 
     //assign class to back image element of a back card
-    addClassToElement(cardBackElem, 'card-img')
+    addClassToElement(cardBackImg, 'card-img')
 
     //assign class to front image element of a front card
-    addClassToElement(cardFrontElem, 'card-img')
+    addClassToElement(cardFrontImg, 'card-img')
     
     //add front image element as child element to front card element
     addChildElement(cardFrontElem, cardFrontImg)
@@ -72,6 +81,9 @@ function addClassToElement(elem, className){
 function addIdToElement(elem, id){
     elem.id = id
 }
+function addSrcToImageElem(imgElem, src){
+    imgElem.src = src
+}
 function addChildElement(parentElem,childElem){
     parentElem.appendChild(childElem)
 }
@@ -82,7 +94,7 @@ function addCardToGridCell(card){
 
     addChildElement(cardPosElem, card)
 }
-function mapCardToGridCell(){
+function mapCardToGridCell(card){
     if(card.id == 1){
         return '.card-pos-a'
     }
@@ -92,7 +104,7 @@ function mapCardToGridCell(){
     else if(card.id == 3){
         return '.card-pos-c'
     }
-    else if(card.id = 4){
+    else if(card.id == 4){
         return '.card-pos-d'
     }
 }
