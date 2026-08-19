@@ -9,6 +9,13 @@ const cardBackImgPath = '/images/card-back-blue.png'
 
 const cardContainerElem = document.querySelector('.card-container')
 
+function createCards(){
+    cardOobjectDefinitions.forEach((cardItem)=>{
+        createCard(cardItem)
+    })
+}
+
+
 function createCard(cardItem){
     //create div elements that make up a card
     const cardElem = createElement('div')
