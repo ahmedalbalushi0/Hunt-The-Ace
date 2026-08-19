@@ -81,7 +81,7 @@ function addClassToElement(elem, className){
 function addIdToElement(elem, id){
     elem.id = id
 }
-function addSrcToImageElem(imgElem, src){
+function addSrcToImgElem(imgElem, src){
     imgElem.src = src
 }
 function addChildElement(parentElem,childElem){
