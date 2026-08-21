@@ -11,7 +11,7 @@ const cardContainerElem = document.querySelector('.card-container')
 
 createCards()
 
-function loadGame{
+function loadGame(){
     createCards()
 }
 function startGame(){
