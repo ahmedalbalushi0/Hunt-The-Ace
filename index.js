@@ -11,6 +11,13 @@ const cardContainerElem = document.querySelector('.card-container')
 
 createCards()
 
+function loadGame{
+    createCards()
+}
+function startGame(){
+    
+}
+
 function createCards(){
     cardOobjectDefinitions.forEach((cardItem)=>{
         createCard(cardItem)
