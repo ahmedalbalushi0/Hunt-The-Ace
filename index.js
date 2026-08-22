@@ -15,13 +15,18 @@ const cardContainerElem = document.querySelector('.card-container')
 
 createCards()
 
+loadGame()
+
 function loadGame(){
     createCards()
 
     cards = document.querySelectorAll('.card')
+
+    playGameButtonElem.addEventListener('click', ()=>startGame())
+
 }
 function startGame(){
-    
+    alert('')
 }
 
 function createCards(){
